@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %> - Enforce</title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    </style>
+    <link href="/stylesheets/bootstrap-responsive.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/">Enforce</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active"><a href="/">首页</a></li>
+                    <li><a href="/login">登入</a></li>
+                    <li><a href="/reg">管理员注册</a></li>
+                    <li><a href="/logout">登出</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="container" class="container">
+    <div>
+        <p><h2>用户主页</h2></p>
+        <p>
+            <a class="btn btn-primary btn-large" href="/users/messageXG">用户信息修改</a>
+            <a class="btn btn-large" href="/users/EQuery">负责伙伴企业查询</a>
+            <a class="btn btn-primary btn-large" href="/users/ProQuery">负责产品查询</a>
+            <a class="btn btn-large" href="/users/colleagueQuery">同事查询</a>
+            <a class="btn btn-primary btn-large" href="/users/BuildR">建立本企业同事关系</a>
+        </p>
+    </div>
+    <hr/>
+    <hr/>
+    <%- body %>
+    <hr/>
+    <footer>
+        <p>服务开发技术实验</p>
+    </footer>
+</div>
+</body>
+<script src="/javascripts/jquery.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+</html>
+<!--模板文件不是孤立展示的,默认情况下所有的模板都继承自 layout.ejs,即 <%- body %>部分才是独特的内容,其他部分是共有的,可以看作是页面框架-->

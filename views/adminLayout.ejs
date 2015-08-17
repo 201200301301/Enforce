@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %> - Enforce</title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    </style>
+    <link href="/stylesheets/bootstrap-responsive.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/">Enforce</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active"><a href="/">首页</a></li>
+                    <li><a href="/login">登入</a></li>
+                    <li><a href="/reg">管理员注册</a></li>
+                    <li><a href="/logout">登出</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="container" class="container">
+    <div>
+        <p><h2>管理员主页</h2></p>
+        <p>
+            <a class="btn btn-primary btn-large" href="/admin/messageXG">企业信息修改</a>
+            <a class="btn btn-large" href="/admin/userM/C">企业用户增加</a>
+            <a class="btn btn-large" href="/admin/userM/D">企业用户删除</a>
+            <a class="btn btn-primary btn-large" href="/admin/productM/C">企业产品增加</a>
+            <a class="btn btn-primary btn-large" href="/admin/productM/D">企业产品删除</a>
+            <a class="btn btn-large" href="/admin/partM/C">产品外购件增加</a>
+            <a class="btn btn-large" href="/admin/partM/C">产品外购件删除</a>
+            <a class="btn btn-primary btn-large" href="/admin/pp/C">创建产品外购件关系</a>
+            <a class="btn btn-primary btn-large" href="/admin/pp/D">删除产品外购件关系</a>
+            <a class="btn btn-large" href="/admin/chargeE/C">创建员工负责合作企业</a>
+            <a class="btn btn-large" href="/admin/chargeE/D">删除员工负责合作企业</a>
+            <a class="btn btn-primary btn-large" href="/admin/chargePro/C">创建员工负责本企业产品</a>
+            <a class="btn btn-primary btn-large" href="/admin/chargePro/D">删除员工负责本企业产品</a>
+            <a class="btn btn-large" href="/admin/ER/C">建立企业间关系</a>
+            <a class="btn btn-large" href="/admin/ER/D">删除企业间关系</a>
+        </p>
+    </div>
+    <hr/>
+    <hr/>
+    <%- body %>
+    <hr/>
+    <footer>
+        <p>服务开发技术实验</p>
+    </footer>
+</div>
+</body>
+<script src="/javascripts/jquery.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+</html>
+<!--模板文件不是孤立展示的,默认情况下所有的模板都继承自 layout.ejs,即 <%- body %>部分才是独特的内容,其他部分是共有的,可以看作是页面框架-->
